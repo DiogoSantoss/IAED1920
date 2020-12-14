@@ -1,7 +1,5 @@
 # Enunciado do Projecto 2 - IAED 2019/20
 
-## Data de entrega: 25 de Maio de 2020, às 23h59m
-
 ## LOG alterações
 
 ## 1. Introdução
@@ -113,11 +111,8 @@ A sigla `NL` vai ser usada no texto seguinte para designar este número.
 
 O programa deverá escrever no standard output as respostas aos comandos apresentados no standard input. As respostas são igualmente linhas de texto formatadas conforme definido anteriormente neste enunciado. Tenha em atenção o número de espaços entre elementos do seu output, assim como os espaços no final de cada linha. Procure respeitar escrupulosamente as indicações dadas.
 
-## 5. Exemplos (Input/Output)
 
-Ver os exemplos de input e respectivos outputs na pasta `testes_enunciado/`.
-
-## 6. Compilação do Programa
+## 5. Compilação do Programa
 
 O compilador a utilizar é o `gcc` com as seguintes opções de compilação: `-Wall -Wextra -Werror -ansi -pedantic`. Para compilar o programa deve executar o seguinte comando:
 
@@ -125,11 +120,9 @@ O compilador a utilizar é o `gcc` com as seguintes opções de compilação: `-
 
 Este comando deve ter como resultado a geração do ficheiro executável `proj2`, caso não haja erros de compilação. __A execução deste comando não deverá escrever qualquer resultado no terminal. Caso a execução deste comando escreva algum resultado no terminal, considera-se que o programa não compilou com sucesso__. Por exemplo, durante a compilação do programa, o compilador não deverá escrever mensagens de aviso (warnings).
 
-Algumas dicas para degugging podem ser encontradas [aqui](debugging-guidelines.md).
-
 __Não poderá ser usada a biblioteca `search.h`__
 
-## 7. Execução do Programa
+## 6. Execução do Programa
 
 O programa deve ser executado da forma seguinte:
 
@@ -138,57 +131,3 @@ O programa deve ser executado da forma seguinte:
 Posteriormente poderá comparar o seu output (`*.myout`) com o output previsto (`*.out`) usando o comando `diff`,
 
     $ diff test.out test.myout
-
-### 7.1. Testes Auxiliares
-
-Para testar o seu programa poderá executar os passos indicados acima ou usar os scripts `test.sh` e `test-vg.sh` distribuídos nesta pasta. Para isso __deverão ter a vossa solução nesta pasta__ e
-
-1. Para executarem todos os testes de uma `pasta` deverão executar
-
-        $ ./test.sh <pasta> <vossos_ficheiros_c>
-
-2. Para executarem todos os testes de uma `pasta` com o *valgrind* deverão executar
-
-        $ ./test-vg.sh <pasta> <vossos_ficheiros_c>
-
-Estes scripts compilam os ficheiros indicados e comparam o resultado obtido com o resultado esperado.
-
-## 8. Entrega do Projecto
-
-A entrega do projecto deverá respeitar o procedimento seguinte:
-
-* Na página da disciplina aceda ao sistema para entrega de projectos. O sistema será activado uma semana antes da data limite de entrega. Instruções acerca da forma de acesso ao sistema serão oportunamente fornecidas.
-
-* Efectue o upload de um ficheiro arquivo com extensão `.zip` que inclua todos os ficheiros fonte que constituem o programa.
-  * Se o seu código tiver apenas um ficheiro o zip conterá apenas esse ficheiro.
-  * Se o seu código estiver estruturado em vários ficheiros (`.c` e `.h`) não se esqueça de os juntar também ao pacote.
-
-* Para criar um ficheiro arquivo com a extensão `.zip` deve executar o seguinte comando __na directoria onde se encontram os ficheiros__ com extensão `.c` e `.h` (se for o caso), criados durante o desenvolvimento do projecto:
-
-        $ zip proj2.zip *.c *.h
-
-* Como resultado do processo de upload será informado se a resolução entregue apresenta a resposta esperada num conjunto de casos de teste.
-
-* O sistema não permite submissões com menos de 10 minutos de intervalo para o mesmo aluno. Tenha especial atenção a este facto na altura da submissão final.
-
-* Data limite de entrega do projecto: __25 de Maio de 2020, às 23h59m__. Até à data limite poderá efectuar o número de submissões que desejar, sendo utilizada para efeitos de avaliação a última submissão efectuada. Deverá portanto verificar cuidadosamente que a última submissão corresponde à versão do projecto que pretende que seja avaliada. Não existirão excepções a esta regra.
-
-## 9. Avaliação do Projecto
-
-### 9.1. Componentes da Avaliação
-
-Na avaliação do projecto serão consideradas as seguintes componentes:
-
-1. A primeira componente será feita automaticamente e avalia o desempenho da funcionalidade do programa realizado. Esta componente é avaliada entre 0 e 17 valores.
-
-2. A segunda componente avalia a qualidade do código entregue, nomeadamente os seguintes aspectos: comentários, indentação, alocação dinâmica de memória, estruturação, modularidade e divisão em ficheiros, abstracção de dados, entre outros. Esta componente poderá variar entre -4 valores e +3 valores relativamente à classificação calculada no item anterior e será atribuída posteriormente.
-Algumas guidelines sobre este tópico podem ser encontradas [aqui](guidelines.md).
-
-3. Na segunda componente serão utilizadas as ferramentas _lizard_, _valgrind_, e a opção _fsanitize_ por forma a detectar a complexidade de código, fugas de memória (“memory leaks”) ou outras incorrecções no código, que serão penalizadas.
-Aconselha-se por isso que os alunos utilizem estas ferramentas para fazer debugging do código e corrigir eventuais incorrecções, antes da submissão do projecto. Mais informações podem ser encontradas [aqui](guidelines.md).
-
-### 9.2. Atribuição Automática da Classificação
-
-* A classificação da primeira componente da avaliação do projecto é obtida através da execução automática de um conjunto de testes num computador com o sistema operativo GNU/Linux. Torna-se portanto essencial que o código compile correctamente e que respeite o formato de entrada e saída dos dados descritos anteriormente. Projectos que não obedeçam ao formato indicado no enunciado serão penalizados na avaliação automática, podendo, no limite, ter 0 (zero) valores se falharem todos os testes. Os testes considerados para efeitos de avaliação poderão incluir (ou não) os disponibilizados na página da disciplina, além de um conjunto de testes adicionais. A execução de cada programa em cada teste é limitada na quantidade de memória que pode utilizar, e no tempo total disponível para execução, sendo o tempo limite distinto para cada teste.
-
-* Note-se que o facto de um projecto passar com sucesso o conjunto de testes disponibilizado na página da disciplina não implica que esse projecto esteja totalmente correcto. Apenas indica que passou alguns testes com sucesso, mas este conjunto de testes não é exaustivo. É da responsabilidade dos alunos garantir que o código produzido está correcto.
