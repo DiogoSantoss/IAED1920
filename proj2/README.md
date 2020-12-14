@@ -1,7 +1,5 @@
 # Enunciado do Projecto 2 - IAED 2019/20
 
-## LOG alterações
-
 ## 1. Introdução
 
 O objectivo deste projeto é o desenvolvimento, em linguagem C, de um sistema de
