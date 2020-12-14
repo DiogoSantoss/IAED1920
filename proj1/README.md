@@ -147,15 +147,7 @@ Os comandos disponíveis são descritos de seguida. Cada comando indica uma dete
 
 O programa deverá escrever no standard output as respostas aos comandos apresentados no standard input. As respostas são igualmente linhas de texto formatadas conforme definido anteriormente neste enunciado. Tenha em atenção ao número de espaços entre elementos do seu output, assim como a ausência de espaços e os pontos finais no final de cada linha. Procure respeitar escrupulosamente as indicações dadas.
 
-## 5. Exemplos (Input/Output)
-
-Ver os exemplos de input e respectivos output na pasta `testes_enunciado/`.
-
-Foram disponiblizados novos exemplos de input e respectivos output na pasta `testes_publicos/`. Para uma maior facilidade de debug os produtos criados com o comando `a` nestes exemplos têm como sufixo o seu `idp`, ie, a sua descrição é `string-aleatoria-idp` onde `idp` é o seu identificador. __NOTAR que as descrições dos produtos nos testes avaliados no Mooshak não terão este formato. Este é só para facilitar o debug durante o desenvolvimento.__
-
-Existem ainda outros 4 exemplos que pelo seu tamanho encontram-se disponíveis [aqui](https://fenix.tecnico.ulisboa.pt/downloadFile/845043405518428/testes-publicos.zip).
-
-## 6. Compilação do Programa
+## 5. Compilação do Programa
 
 O compilador a utilizar é o `gcc` com as seguintes opções de compilação: `-Wall -Wextra -Werror -ansi -pedantic`. Para compilar o programa deve executar o seguinte comando:
 
@@ -163,7 +155,7 @@ O compilador a utilizar é o `gcc` com as seguintes opções de compilação: `-
 
 Este comando deve ter como resultado a geração do ficheiro executável `proj1`, caso não haja erros de compilação. __A execução deste comando não deverá escrever qualquer resultado no terminal. Caso a execução deste comando escreva algum resultado no terminal, considera-se que o programa não compilou com sucesso__. Por exemplo, durante a compilação do programa, o compilador não deverá escrever mensagens de aviso (warnings).
 
-## 7. Execução do Programa
+## 6. Execução do Programa
 
 O programa deve ser executado da forma seguinte:
 
@@ -172,72 +164,3 @@ O programa deve ser executado da forma seguinte:
 Posteriormente poderá comparar o seu output (`*.myout`) com o output previsto (`*.out`) usando o comando `diff`,
 
     $ diff test.out test.myout
-
-### 7.1. Testes Auxiliares
-
-Para testar o seu programa poderá executar os passos indicados acima ou usar o script `test.sh` distribuído nesta pasta. Para isso __deverá ter a sua solução nesta pasta__ e
-
-Para executar todos os testes de uma `pasta` deverá executar
-
-    $ ./test.sh pasta vossos_ficheiros_c
-
-Este script compila os ficheiros indicados e compara o resultado obtido com o resultado esperado.
-Se apenas indicar o tempo de execução é porque o comando `diff` não encontrou nenhuma diferença. Caso indique mais informação, então é porque o resultado obtido e o resultado esperado diferem.
-
-## 8. Entrega do Projecto
-
-A entrega do projecto deverá respeitar o procedimento seguinte:
-
-* Na página da disciplina aceda ao sistema para entrega de projectos. O sistema será activado uma semana antes da data limite de entrega. Instruções acerca da forma de acesso ao sistema serão oportunamente fornecidas.
-
-* Efectue o upload de um ficheiro arquivo com extensão `.zip` que inclua todos os ficheiros fonte que constituem o programa.
-  * Se o seu código tiver apenas um ficheiro o zip conterá apenas esse ficheiro.
-  * Se o seu código estiver estruturado em vários ficheiros (`.c` e `.h`) não se esqueça de os juntar também ao pacote.
-
-* Para criar um ficheiro arquivo com a extensão `.zip` deve executar o seguinte comando __na directoria onde se encontram os ficheiros__ com extensão `.c` e `.h` (se for o caso), criados durante o desenvolvimento do projecto:
-
-        $ zip proj1.zip *.c *.h
-
-    Se só tiver um único ficheiro (e.g., `proj1.c`), bastará escrever:
-
-        $ zip proj1.zip proj1.c
-
-* Como resultado do processo de upload será informado se a resolução entregue apresenta a resposta esperada num conjunto de casos de teste.
-
-* O sistema não permite submissões com menos de 10 minutos de intervalo para o mesmo grupo. Tenha especial atenção a este facto na altura da submissão final. Exemplos de casos de teste serão oportunamente fornecidos.
-
-* Data limite de entrega do projecto: __7 de Abril de 2020, às 23h59m__. Até à data limite poderá efectuar o número de submissões que desejar, sendo utilizada para efeitos de avaliação a última submissão efectuada. Deverá portanto verificar cuidadosamente que a última submissão corresponde à versão do projecto que pretende que seja avaliada. Não existirão excepções a esta regra.
-
-## 9. Avaliação do Projecto
-
-### 9.1. Componentes da Avaliação
-
-Na avaliação do projecto serão consideradas as seguintes componentes:
-
-1. A primeira componente avalia o desempenho da funcionalidade do programa realizado. Esta componente é avaliada entre 0 e 17 valores.
-
-2. A segunda componente avalia a qualidade do código entregue, nomeadamente os seguintes aspectos: comentários, indentação, estruturação, modularidade, abstracção, entre outros. Esta componente poderá variar entre -3 valores e +3 valores relativamente à classificação calculada no item anterior e será atribuída posteriormente.
-Algumas guidelines sobre este tópico podem ser encontradas [aqui](guidelines.md).
-
-### 9.2. Atribuição Automática da Classificação
-
-* A classificação da primeira componente da avaliação do projecto é obtida através da execução automática de um conjunto de testes num computador com o sistema operativo GNU/Linux. Torna-se portanto essencial que o código compile correctamente e que respeite o formato de entrada e saída dos dados descrito anteriormente. Projectos que não obedeçam ao formato indicado no enunciado serão penalizados na avaliação automática, podendo, no limite, ter 0 (zero) valores se falharem todos os testes. Os testes considerados para efeitos de avaliação poderão incluir (ou não) os disponibilizados na página da disciplina, além de um conjunto de testes adicionais. A execução de cada programa em cada teste é limitada na quantidade de memória que pode utilizar, e no tempo total disponível para execução, sendo o tempo limite distinto para cada teste.
-
-* Note-se que o facto de um projecto passar com sucesso o conjunto de testes disponibilizado na página da disciplina não implica que esse projecto esteja totalmente correcto. Apenas indica que passou alguns testes com sucesso, mas este conjunto de testes não é exaustivo. É da responsabilidade dos alunos garantir que o código produzido está correcto.
-
-* Em caso algum será disponibilizado qualquer tipo de informação sobre os casos de teste utilizados pelo sistema de avaliação automática. A totalidade de ficheiros de teste usados na avaliação do projecto serão disponibilizados na página da disciplina após a data de entrega.
-
-## 10. Dicas para Desenvolvimento do Projecto
-
-Abaixo podem encontrar algumas dicas simples que facilitam o despiste de erros comuns no desenvolvimento do projecto.
-Sugerimos que __desenvolvam os vossos projectos de forma incremental e que testem as vossas soluções localmente antes de as submeterem no Mooshak__.
-
-Sugerimos que sigam os seguintes passos:
-
-1. Desenvolvam e corrijam o código de forma incremental garantindo que compila sem erros nem warnings. Não acumulem uma série de erros pois o debug é tanto mais complexo quanto a dimensão da base de código a analisar.
-2. Garantam que estão a ler o input e a escrever o output correctamente, em particular garantam que as strings não ficam com espaços extra, `\n` no final, que a formatação está correcta e de acordo com o que está no enunciado, etc.
-3. Garantam que o comando `a` funciona correctamente. Poderá para isso ser útil desenvolver um comando auxiliar `k` que lista os produtos existentes no sistema  (semelhante ao `l` mas esquecendo a ordenação).
-4. Garantam que os comandos `N` e `A` funcionam correctamente. Poderá para isso ser útil desenvolver um comando auxiliar `K` que lista os produtos existentes numa encomenda (semelhante ao `L` mas esquecendo a ordenação).
-5. Garantam que o comando `E` funciona correctamente.
-6. Teste isoladamente os comandos `q`, `r`, `R`, `C`, `p`, e `M` e verifiquem que funcionam correctamente. Poderá de novo ser útil os comandos `k` e `K` criados acima.
-7. Garantam que os comandos `l` e `L` funcionam correctamente. Os comandos `k` e `K` criados acima poderão ser bons pontos de partida.
