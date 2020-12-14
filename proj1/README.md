@@ -1,12 +1,5 @@
 # Enunciado do Projecto 1 - IAED 2019/20
 
-## Data de entrega: 7 de Abril de 2020, às 23h59m (23h59m)
-
-## LOG alterações
-
-- 31Mar2020 - Mooshak aberto. Ver informações na Secção Projecto na página da cadeira. Relembramos que não podem usar a função `qsort` nativa do C e que esta string não deverá aparecer no vosso código.
-- 24Mar2020 - Clarifica comando `r`
-
 ## 1. Introdução
 
 O objectivo deste projeto é o desenvolvimento, em linguagem C, de um sistema de logística. A interacção com o programa deverá ocorrer através de um conjunto de linhas compostas por uma letra (comando) e um número de argumentos dependente do comando a executar. Os possíveis comandos são listados na Tabela seguinte e indicam as operações a executar.
